@@ -11,5 +11,5 @@ pydantic==1.7.3
 rfc3986==1.4.0
 sniffio==1.2.0
 soupsieve==2.2
-starlette==0.13.6
+starlette==0.14.2
 uvicorn==0.13.3
