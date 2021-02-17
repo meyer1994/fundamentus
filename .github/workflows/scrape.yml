@@ -1,0 +1,22 @@
+name: scrape
+
+on:
+  push:  # For testing
+    branches: master
+  schedule:
+    - cron: '0 0 23 ? * MON-FRI *'  # Every weekday
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - run: pip install -r requirements.txt
+      - run: python main.py $(date -I) data
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Inserting fundamentus for $(date -I)
+          file_pattern: data/**/*.json
