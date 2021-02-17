@@ -31,10 +31,9 @@ $ pip install -r requirements.txt
 ## Usage
 
 This repository is to be used like a REST service. You can fetch, if available,
-information about different stocks from Brazil.
-
-For example, if you want to fetch stock information for PETR3 on 2021-01-17,
-you can perform a GET request in the following URL:
+information about different stocks from Brazil. For example, if you want to
+fetch stock information for PETR3 on 2021-01-17, you can perform a GET request
+in the following URL:
 
 ```sh
 $ curl https://raw.githubusercontent.com/meyer1994/fundamentus/master/data/PETR3/2021-02-17.json
