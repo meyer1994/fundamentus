@@ -2,6 +2,7 @@ from collections import defaultdict
 
 import httpx
 from bs4 import BeautifulSoup
+from unidecode import unidecode
 
 URL = 'http://www.fundamentus.com.br/resultado.php'
 HEADERS = {'User-Agent': 'Mozilla/5.0'}
@@ -50,16 +51,27 @@ PARAMS = {
 }
 
 
+def tofloat(value: str) -> float:
+    value = value.replace('.', '')
+    value = value.replace(',', '.')
+
+    if value.endswith('%'):
+        value = value[:-1]
+        return float(value) / 100
+    return float(value)
+
+
 def load():
     res = httpx.get(URL, headers=HEADERS, params=PARAMS)
-    bs = BeautifulSoup(res.text, features='lxml')
+    bs = BeautifulSoup(res.text, 'html.parser')
 
-    table = bs.find('table', {'id': 'resultado'})
+    table = bs.find('table', id='resultado')
 
     head = table.find('thead')
     body = table.find('tbody')
 
     keys = [key.text for key in head.find_all('th')]
+    keys = [unidecode(key) for key in keys]
 
     rows = []
     for tr in body.find_all('tr'):
@@ -69,6 +81,8 @@ def load():
     result = defaultdict(dict)
     for ticker, *data in rows:
         for key, dat in zip(keys[1:], data):
+            dat = tofloat(dat)
+            dat = round(dat, 5)
             result[ticker][key] = dat
 
     return result
