@@ -18,5 +18,5 @@ jobs:
       - run: python main.py $(date -I) data
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Inserting fundamentus for $(date -I)
+          commit_message: Inserting fundamentus
           file_pattern: data/**/*.json
