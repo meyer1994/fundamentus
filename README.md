@@ -61,9 +61,9 @@ $ curl https://raw.githubusercontent.com/meyer1994/fundamentus/master/data/PETR3
 }
 ```
 
-This repository was created on 2021-01-17, so I only have information from this
-day forward. If anyone have historical data from Fundamentus, and is willing
-to, share it, I will gladly add it to this repo.
+This repository was created on 2021-02-17, so I only have information from this
+day forward. If anyone has historical data from Fundamentus, and is willing
+to share it, I will gladly add it to this repo.
 
 ## Thanks
 
