@@ -6,5 +6,5 @@ httpx==0.17.1
 idna==3.1
 rfc3986==1.4.0
 sniffio==1.2.0
-soupsieve==2.2
+soupsieve==2.2.1
 Unidecode==1.2.0
