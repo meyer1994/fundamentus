@@ -3,7 +3,7 @@ certifi==2021.5.30
 h11==0.12.0
 httpcore==0.13.3
 httpx==0.18.1
-idna==3.1
+idna==3.2
 rfc3986==1.5.0
 sniffio==1.2.0
 soupsieve==2.2.1
