@@ -1,12 +1,12 @@
 {
-  "Cotacao": 40.0,
+  "Cotacao": 39.99,
   "Cresc. Rec.5a": -0.2451,
   "Div.Brut/ Patrim.": -3.04,
   "Div.Yield": 0.0,
   "EV/EBIT": 169.18,
   "EV/EBITDA": 137.49,
   "Liq. Corr.": 0.8,
-  "Liq.2meses": 89599.7,
+  "Liq.2meses": 91851.4,
   "Mrg Ebit": 0.1188,
   "Mrg. Liq.": -3.5392,
   "P/Ativ Circ.Liq": -0.04,
@@ -15,7 +15,7 @@
   "P/EBIT": 7.15,
   "P/L": -0.24,
   "P/VP": -0.12,
-  "PSR": 0.85,
+  "PSR": 0.849,
   "Patrim. Liq": -627773000.0,
   "ROE": 0.512,
   "ROIC": 0.0069
