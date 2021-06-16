@@ -1,7 +1,7 @@
 beautifulsoup4==4.9.3
 certifi==2021.5.30
 h11==0.12.0
-httpcore==0.13.5
+httpcore==0.13.6
 httpx==0.18.1
 idna==3.2
 rfc3986==1.5.0
